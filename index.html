@@ -6,6 +6,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html">
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="media-css.css">
     <title>BRIGHT FISH</title>
 </head>
 <body>
@@ -27,7 +28,17 @@
                         <div class="text right"><div>&mdash;</div>аэрография<div>&mdash;</div></div>
                     </div>
                 </a>
-                <div class="logotip"><img src="./img/titlepage.png"> </div>
+                <div class="logotip">
+                    <picture alt="BRIGHT FISH">
+                        <source src="./img/mobail-768/titlepage.jpg" media="min-width:640px">
+                        <source src="./img/board-1280/titlepage.jpg" media="min-width:1000px">
+                        <source src="./img/notebook-1680/titlepage.jpg" media="min-width:1300px">
+                        <source src="./img/tv-2048/titlepage.jpg" media="min-width:1900px">
+                        <source src="./img/titlepage.jpg">
+                    <!-- для браузеров не поддерживающих тег -->
+                        <img src="./img/board-1280/titlepage.jpg" alt="BRIGHT FISH">
+                    </picture>
+                </div>
             </div>
 
         </div>
@@ -41,6 +52,36 @@
         $(".bgpicright").toggleClass("bgpichovered");
     });
 </script>
+    <!— Yandex.Metrika counter —>
+    <script type="text/javascript">
+        var yaParams = {/*Здесь параметры визита*/};
+    </script>
+
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter26346798 = new Ya.Metrika({id:26346798,
+                        webvisor:true,
+                        clickmap:true,
+                        accurateTrackBounce:true,params:window.yaParams||{ }});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/26346798" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!— /Yandex.Metrika counter —>
 </body>
 </html>
 
